@@ -1,0 +1,281 @@
+
+::-moz-selection {
+    background: #a93397;
+    text-shadow: none;
+}
+
+::selection {
+    background: #a93397;
+    text-shadow: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+    color: #222;
+    font-family: 'Noto Sans', Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+img {
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: #a93397;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -100px;
+    position: relative;
+}
+
+footer, .push {
+    height: 100px;
+}
+
+footer {
+    min-height: 100px;
+    width: 100%;
+    position: relative;
+    background-color: #f7f6f5;
+    color: #666;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+footer ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 15px 0 0 0;
+    margin: 0;
+    line-height: 25px;
+}
+
+
+/* Hide page elements only when JS is available. */
+html.js footer, html.js footer img, html.js .wrapper {
+    display: none;
+}
+
+header {
+    padding-top: 80px;
+    text-align: center;
+
+    /*
+        Hack: Due to bug in Chrome in Windows, web fonts look ugly.
+        Adding shadow makes fonts look a bit better in Chrome.
+
+        Chrome (Windows) bug: https://code.google.com/p/chromium/issues/detail?id=137692;
+        See: https://gist.github.com/dalethedeveloper/1846552;
+    */
+    text-shadow: 0 0 1px rgba(0,0,0,0.3); 
+}
+
+header h2 {
+    font-family: 'Gabriela', Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 28px;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Nunito', "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    font-size: 48px;
+}
+
+.location {
+    vertical-align: bottom;
+}
+
+.location img {
+    width: 32px;
+    height: 32px;
+}
+
+address {
+    width: 390px;
+    margin: 0 auto;
+    font-style: normal;
+}
+
+address ul {
+    list-style: none;
+    margin: 60px 0 0 0;
+    padding: 0;
+}
+
+address li{
+    line-height: 60px;
+}
+
+address a {
+    font-family: Monaco, Consolas, "Lucida Console", monospace;
+    font-size: 18px;
+    color: #222;
+}
+
+address a:hover {
+    text-decoration: none;
+}
+
+.icon-location {
+    color: #a93397;
+    font-size: 24px;
+}
+
+.icon-twitter, .icon-github, .icon-linkedin, .icon-mail {
+    color: #a93397;
+    font-size: 48px;
+    line-height: 48px;
+    vertical-align: middle;
+} 
+
+a:hover .icon-linkedin {
+    color: #006699;
+} 
+
+a:hover .icon-github {
+    color: #222;
+}
+
+a:hover .icon-twitter {
+    color: #52ade5;
+}
+
+a:hover .icon-mail {
+    color: #ef8808;
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media only screen and (max-height: 710px) {
+    header {
+        padding-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    address {
+        width: 100%;
+        text-align: center;
+    }
+
+    address ul {
+        margin-top: 30px;
+    }
+
+    address li{
+        padding-bottom: 25px;
+        display: inline-block;
+    }
+
+    .link {
+        display: none;
+    }
+
+    .icon-twitter, .icon-github, .icon-linkedin, .icon-mail {
+        font-size: 135px;
+    } 
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.disable-select {
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+}
+
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

@@ -1,0 +1,9 @@
+This im my private webpage with links to my social media.
+
+Created By: Tomasz (Tomek) Kolasa
+
+# Technologies uses:
+
+    HTML5, CSS3
+    jQuery, Modernizr
+    Inkscape & Gimp
