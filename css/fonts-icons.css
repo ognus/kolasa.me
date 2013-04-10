@@ -37,21 +37,22 @@ you can use the generic selector below, but it's slower:
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 }
-.icon-twitter:before {
-	content: "\e004";
-}
-.icon-github:before {
-	content: "\e005";
-}
-.icon-linkedin:before {
-	content: "\e006";
-}
+
 .icon-mail:before {
-	content: "\e000";
+	content: "\e003";
 }
 .icon-location:before {
-	content: "\e001";
+	content: "\e004";
 }
 .icon-github-2:before {
 	content: "\e002";
+}
+.icon-github:before {
+	content: "\e006";
+}
+.icon-twitter:before {
+	content: "\e005";
+}
+.icon-linkedin:before {
+	content: "\e001";
 }
